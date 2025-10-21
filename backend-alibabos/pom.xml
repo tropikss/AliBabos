@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>backend-alibabos</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>22</maven.compiler.source>
+        <maven.compiler.target>22</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <plugins>
+
+            <!-- Checkstyle -->
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-checkstyle-plugin</artifactId>
+            <version>3.3.1</version>
+            <executions>
+                <execution>
+                <phase>verify</phase>
+                <goals><goal>check</goal></goals>
+                </execution>
+            </executions>
+            <configuration>
+                <configLocation>checkstyle.xml</configLocation>
+                <failOnViolation>true</failOnViolation>
+            </configuration>
+            </plugin>
+
+            <!-- SpotBugs -->
+            <plugin>
+            <groupId>com.github.spotbugs</groupId>
+            <artifactId>spotbugs-maven-plugin</artifactId>
+            <version>4.9.8.0</version>
+            <dependencies>
+                <!-- overwrite dependency on spotbugs if you want to specify the version of spotbugs -->
+                <dependency>
+                <groupId>com.github.spotbugs</groupId>
+                <artifactId>spotbugs</artifactId>
+                <version>4.9.8</version>
+                </dependency>
+            </dependencies>
+            </plugin>
+
+            <!-- PMD -->
+            <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-pmd-plugin</artifactId>
+            <version>3.22.0</version>
+            <executions>
+                <execution>
+                <phase>verify</phase>
+                <goals><goal>check</goal></goals>
+                </execution>
+            </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+
+</project>
