@@ -10,7 +10,6 @@
     "typescript-eslint": "^8.46.2"
   },
   "scripts": {
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "format": "prettier --check ."
+    "lint": "eslint src"
   }
 }
