@@ -1,6 +1,7 @@
-name: CI - Front & Back
+name: CI
 
-on[push]:
+on: [push, pull_request]
+
 jobs:
   backend:
     runs-on: ubuntu-latest
@@ -10,5 +11,15 @@ jobs:
         with:
           distribution: temurin
           java-version: 21
-      - run: mvn clean verify
-        working-directory: backend-alibabos
+      - run: mvn test
+        working-directory: backend
+
+  # frontend:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: actions/setup-node@v4
+  #       with:
+  #         node-version: 20
+  #     - run: npm ci && npm test
+  #       working-directory: frontend
