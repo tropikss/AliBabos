@@ -5,6 +5,7 @@ public class TestClass {
         System.out.println("Hello");
         System.out.println('COuCUO');
         System.out.println('csdfqsdf');
-                System.out.println('COuCUO');
+                System.out.println('csdfqsdf');
+
     }
 }
