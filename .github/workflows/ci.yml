@@ -15,3 +15,4 @@ jobs:
           distribution: temurin
           java-version: 21
       - run: mvn clean verify
+        working-directory: backend-alibabos
