@@ -1,0 +1,20 @@
+# variable d'environnement
+
+**/.env
+**/.env.*
+**/*.env
+
+### IntelliJ IDEA ###
+.idea
+.idea/modules.xml
+.idea/jarRepositories.xml
+.idea/compiler.xml
+.idea/libraries/
+*.iws
+*.iml
+*.ipr
+
+### maven ###
+
+target/
+.mvn
